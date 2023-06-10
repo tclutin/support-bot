@@ -13,8 +13,7 @@ namespace SupportBot.Commands
         {
             commands = new List<ICommand>
             {
-                new StartCommand(),
-                new LookCommand(),
+
             };
         }
 

@@ -34,7 +34,7 @@ namespace SupportBot.Controllers
             {
                 _supportService.token.TokenApi = null;
             }
-            
+
             if (_supportService.token.TokenApi == null)
             {
                 var telegram = await _supportService.LoginAsync(_configuration["SupportService:Username"], _configuration["SupportService:Password"]);
@@ -57,7 +57,7 @@ namespace SupportBot.Controllers
                         var ticket = await _supportService.CreateTicket(user.Id, "None", "None");
                         if (ticket != null)
                         {
-                            await _botClient.SendTextMessageAsync(user.TelegramId,"Вы успешно отправили заявку. Пожалуйста дождитесь ответа сотрудника");
+                            await _botClient.SendTextMessageAsync(user.TelegramId, "Вы успешно отправили заявку. Пожалуйста дождитесь ответа сотрудника");
                         }
                     }
                     else

@@ -1,4 +1,5 @@
 
+using Microsoft.Extensions.Configuration;
 using SPIAPI;
 using SupportBot.Service;
 
@@ -23,7 +24,6 @@ namespace SupportBot
                     return new SupportService(apiUrl, client);
                 });
             }
-
 
             var app = builder.Build();
             {
